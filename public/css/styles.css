@@ -1,0 +1,312 @@
+/* Colours */
+:root {
+    --green-100: #2E4845;
+    --green-200: #D3DDC6;
+    --white-100: #F7FAF6;
+    --white-200: #F1F3F0;
+    --white-300: #CAD1CE;
+    --red-error: #E83644;
+    --orange-warning: #FF8C21;
+    --green-success: #00B453;
+    --disabled-colour: #D9D9D9;
+}
+.text-colour-green-100{
+    color: var(--green-100);
+}
+.text-colour-green-200{
+    color: var(--green-200);
+}
+.text-colour-white-100{
+    color: var(--white-100);
+}
+.text-colour-white-200{
+    color: var(--white-200);
+}
+.text-colour-white-300{
+    color: var(--white-300);
+}
+.text-colour-orange-warning{
+    color: var(--orange-warning);
+}
+.text-colour-green-success{
+    color: var(--green-success);
+}
+.text-colour-disabled-colour{
+    color: var(--disabled-colour);
+}
+
+/* Fonts */
+:root {
+    --main-font: 'Sora', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--white-100);
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Headings */
+.heading-l{
+    font-family: var(--main-font);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1px;
+}
+.heading-m{
+    font-family: var(--main-font);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: -1px;
+}
+.heading-s{
+    font-family: var(--main-font);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+.heading-xs{
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+.subheading{
+    font-family: var(--main-font);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+/* Body text */
+.copy-body-text{
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+}
+.copy-s-body-text{
+    font-family: var(--main-font);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+}
+.button-body-text{
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Buttons */
+.button-solid{
+    color: var(--green-100);
+    background-color: var(--white-100);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 21px;
+    border-radius: 60px;
+    border: 1px solid var(--green-100);
+    overflow: hidden;
+}
+.button-solid .button-solid-svg{
+    stroke: var(--green-100);
+}
+/* Button solid hover effect */
+.button-solid:hover{
+    cursor: pointer;
+    background-color: var(--green-100);
+    color: var(--white-100);
+}
+.button-solid:hover .button-solid-svg{
+    stroke: var(--white-100);
+}
+/* Button solid focus effect */
+.button-solid:focus{
+    background-color: var(--green-100);
+    color: var(--white-100);
+}
+.button-solid:focus .button-solid-svg{
+    stroke: var(--white-100);
+}
+/* Button solid disabled effect */
+.button-solid-disabled{
+    border: 1px solid var(--disabled-colour);
+    color: var(--disabled-colour);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.button-solid-disabled .button-solid-svg{
+    stroke: var(--disabled-colour);
+}
+
+/* Button with underlined effect */
+.button-underlined{
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button-underlined:before{
+    content: '';
+    background: var(--green-100);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-underlined:hover::before{
+    width: 100%;
+}
+
+.button-underlined-disabled{
+    color: var(--disabled-colour);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Footer links */
+.footer-link{
+    text-decoration: none;
+    color: var(--green-100);
+}
+.footer-link-svg{
+    text-decoration: none;
+    color: var(--green-100);
+}
+.footer-link:hover{
+    color: var(--green-200);
+    transition: color 0.3s ease;
+}
+.footer-link-svg:hover{
+    stroke: var(--green-200);
+    transition: stroke 0.3s ease;
+}
+.footer-link:focus{
+    color: var(--green-200);
+}
+.footer-link-svg:focus{
+    stroke: var(--green-200);
+}
+.footer-link-disabled{
+    color: var(--disabled-colour);
+}
+.footer-link-svg-disabled{
+    stroke: var(--disabled-colour);
+}
+
+/* Separator */
+.separator{
+    height: 1px;
+    background-color: var(--white-300);
+    width: 100%;
+}
+
+/* Display */
+.display-none{
+    display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for headings */
+    .heading-l{
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        letter-spacing: -1px;
+    }
+    .heading-m{
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: -1px;
+    }
+    .heading-s{
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+    .heading-xs{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+    }
+    .subheading{
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2px;
+    }
+
+    /* Adjust styles for body text */
+    .copy-body-text{
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 26px;
+    }
+    .copy-s-body-text{
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 16px;
+    }
+    .button-body-text{
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in.visible {
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease, transform 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
